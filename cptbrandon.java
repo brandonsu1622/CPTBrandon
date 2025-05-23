@@ -5,7 +5,7 @@ public class cptbrandon{
 		Console con = new Console(); 
 		//skz related
 		//how many questions? 		
-		
+		con.println("welcome to chans choice"); 
 		
 		
 		
