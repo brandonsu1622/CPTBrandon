@@ -10,11 +10,15 @@ public class cptbrandon{
 		static boolean blncheat = false;
 	public static void main(String [] args){ 
 		Console con = new Console("Multiple choice", 1280, 720); 	
-		// Main Screen of the Multiple Choice Game
+		// Main Screen
 		while(true){
 			
-			// Creating a background image
-		
+			//background
+			con.clear();
+			BufferedImage imgbackground = con.loadImage("Background.png");
+			con.drawImage(imgbackground,0 ,0);
+			
+			con.repaint();
 		//main menu 
 
 			
@@ -38,7 +42,6 @@ public class cptbrandon{
 		
 		while(true){
 				if(con.currentMouseButton() == 1) {
-					// Finding the location of the mouse if it pressed one of the buttons on the screen
 					int intMouseX = con.currentMouseX();
 					int intMouseY = con.currentMouseY();				
 					// The Play Game Screen 
@@ -46,10 +49,52 @@ public class cptbrandon{
 						TextInputFile quizes = new TextInputFile("quizes.txt");
 						
 						con.clear();
+						
+					con.clear();
+						con.drawImage(imgbackground, 0, 0);
+						
+						// User inputting their names
+						con.println("Please enter your name: ");
+						String strname = con.readLine();
+						con.clear();
+						
+						con.println("Hello " + strname+" what quiz would you like to do?");
+						con.sleep(1000);
+						
+						
+						con.drawString("Return to Main Menu", 510, 575);
+
+						int intX = 120;
+						
+						while(quizes.eof() == false){
+							con.drawString(quizes.readLine(), intX, 420);
+							intX += 300;
+						}
+					con.println("what quiz would you like to play?"); 
+					String strquiz = con.readLine(); 
+					strquiz+=".txt";
+					
+						//accessing the quizes
+						//stray kids quiz
+						if(strquiz.equalsIgnoreCase("straykids")){
+							TextInputFile straykids = new TextInputFile(strquiz);
+							con.clear();  
+							con.drawImage(imgbackground, 0, 0);
+							while(straykids.eof() = false){ 
+								String strline = straykids.readLine(); 
+								int intcount++
+							}
+							int intcount = intcount/4; 
+							for( int i == 0; i < intcount; i++){
+							}
+								
+								
+						}
+							
+							
 					}
 				}
 			}
-	
+		}
 	}
-}
 }
