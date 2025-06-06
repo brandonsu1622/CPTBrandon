@@ -76,17 +76,21 @@ public class cptbrandon{
 					
 						//accessing the quizes
 						//stray kids quiz
+						
 						if(strquiz.equalsIgnoreCase("straykids")){
 							TextInputFile straykids = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
-							while(straykids.eof() = false){ 
-								String strline = straykids.readLine(); 
-								int intcount++
+							String strtemp; 
+							String strquestion[]; 
+							int intnumrand = 0; 
+							while(straykids.eof() == false){ 
+								strtemp = straykids.readLine(); 
+								intnumrand = intnumrand + 1; 
 							}
-							int intcount = intcount/4; 
-							for( int i == 0; i < intcount; i++){
-							}
+							straykids.close(); 
+							con.println("The stray kids quiz has "+intnumrand+" questions"); 
+								
 								
 								
 						}
