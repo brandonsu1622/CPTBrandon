@@ -33,7 +33,9 @@ public class cptbrandon{
 			
 			con.drawString("Help", 480, 480);
 			
-			con.drawString("Quit", 480, 560);
+			con.drawString("Quit", 480, 560); 
+			
+			con.repaint(); 
 			break;
 		}
 		System.out.println("Able to display to main screen");			
@@ -70,27 +72,23 @@ public class cptbrandon{
 							con.drawString(quizes.readLine(), intX, 420);
 							intX += 300;
 						}
-					con.println("what quiz would you like to play?"); 
+					con.println("what quiz would you like to play(add.txt)?"); 
 					String strquiz = con.readLine(); 
-					strquiz+=".txt";
 					
 						//accessing the quizes
 						//stray kids quiz
 						
-						if(strquiz.equalsIgnoreCase("straykids")){
+						if(strquiz.equalsIgnoreCase("straykids.txt")){
 							TextInputFile straykids = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
-							String strtemp; 
-							String strquestion[]; 
-							int intnumrand = 0; 
-							while(straykids.eof() == false){ 
-								strtemp = straykids.readLine(); 
-								intnumrand = intnumrand + 1; 
-							}
-							straykids.close(); 
-							con.println("The stray kids quiz has "+intnumrand+" questions"); 
-								
+							
+							MultipleChoiceTest.quiz1(con);
+							
+							
+							
+							System.out.println("able to run straykids quiz");  
+							break; 
 								
 								
 						}
