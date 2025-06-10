@@ -28,12 +28,14 @@ public class cptbrandon{
 			con.drawString("What would you like to do?", 450, 120);
 			
 			con.drawString("Play Game", 480, 320);
+			
+			con.drawString("Add Quiz", 480, 400); 
 
-			con.drawString("Leaderboard", 480, 400);
+			con.drawString("Leaderboard", 480, 480);
 			
-			con.drawString("Help", 480, 480);
+			con.drawString("Help", 480, 560);
 			
-			con.drawString("Quit", 480, 560); 
+			con.drawString("Quit", 480, 640); 
 			
 			con.repaint(); 
 			break;
@@ -105,6 +107,13 @@ public class cptbrandon{
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz3(con);
+						}
+						if(strquiz.equalsIgnoreCase("valorant.txt")){
+							TextInputFile straykids = new TextInputFile(strquiz);
+							con.clear();  
+							con.drawImage(imgbackground, 0, 0);
+							
+							MultipleChoiceTest.quiz4(con);
 						}
 							
 					}
