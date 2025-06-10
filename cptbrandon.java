@@ -15,7 +15,7 @@ public class cptbrandon{
 			
 			//background
 			con.clear();
-			BufferedImage imgbackground = con.loadImage("Background.png");
+			BufferedImage imgbackground = con.loadImage("background.png");
 			con.drawImage(imgbackground,0 ,0);
 			
 			con.repaint();
@@ -51,6 +51,7 @@ public class cptbrandon{
 						TextInputFile quizes = new TextInputFile("quizes.txt");
 						
 						con.clear();
+					
 						
 					con.clear();
 						con.drawImage(imgbackground, 0, 0);
@@ -71,6 +72,8 @@ public class cptbrandon{
 						while(quizes.eof() == false){
 							con.drawString(quizes.readLine(), intX, 420);
 							intX += 300;
+							
+							
 						}
 					con.println("what quiz would you like to play(add.txt)?"); 
 					String strquiz = con.readLine(); 
@@ -84,15 +87,25 @@ public class cptbrandon{
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz1(con);
-							
-							
-							
-							System.out.println("able to run straykids quiz");  
-							break; 
-								
+											
 								
 						}
+						//animals quiz 
+						
+						if(strquiz.equalsIgnoreCase("animals.txt")){
+							TextInputFile straykids = new TextInputFile(strquiz);
+							con.clear();  
+							con.drawImage(imgbackground, 0, 0);
 							
+							MultipleChoiceTest.quiz2(con);
+						}
+						if(strquiz.equalsIgnoreCase("arcane.txt")){
+							TextInputFile straykids = new TextInputFile(strquiz);
+							con.clear();  
+							con.drawImage(imgbackground, 0, 0);
+							
+							MultipleChoiceTest.quiz3(con);
+						}
 							
 					}
 				}
