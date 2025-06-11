@@ -27,11 +27,11 @@ public class cptbrandon{
 			
 			con.drawString("Play Game", 480, 320);
 			
-			con.drawString("Add Quiz", 480, 400); 
+			con.drawString("Leaderboard", 480, 400); 
 
-			con.drawString("Leaderboard", 480, 480);
+			con.drawString("Help", 480, 480);
 			
-			con.drawString("Help", 480, 560);
+			con.drawString("Add Quiz", 480, 560);
 			
 			con.drawString("Quit", 480, 640); 
 			
@@ -123,7 +123,28 @@ public class cptbrandon{
 					
 				}
 			
-					
+				//leaderboard screen 
+				
+				else if(intMouseX >= 500 && intMouseX <= 780 && intMouseY >= 400 && intMouseY <= 450){
+						TextInputFile leaderboard = new TextInputFile("leaderboard.txt");
+						
+						con.clear(); 
+						con.drawImage(imgbackground, 0,0); 
+						
+						System.out.println("able to access leaderboard"); 
+						
+						//variables
+						String strname; 
+						String stravg; 
+						String strtest; 
+						int intcount = 0; 
+						
+						con.println("this is the leaderboard"); 
+						con.println("Name:   |Test Type:   |Winning Average:    "); 
+						con.println("________________________________________________"); 
+						}
+						
+						
 						
 						
 						
