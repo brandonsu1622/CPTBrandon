@@ -1,69 +1,60 @@
-1. What is the fastest land animal in the world?
-A) Lion
-B) Horse
-C) Cheetah
-D) Greyhound
-C) Cheetah
-
-2. Which animal is known to have the best memory?
-A) Dog
-B) Dolphin
-C) Chimpanzee
-D) Elephant
-D) Elephant
-
-3. What is a baby kangaroo called?
-A) Kit
-B) Calf
-C) Joey
-D) Pup
-C) Joey
-
-4. Which bird is a universal symbol of peace?
-A) Eagle
-B) Owl
-C) Dove
-D) Swan
-C) Dove
-
-5. What type of animal is a Komodo dragon?
-A) Mammal
-B) Lizard
-C) Fish
-D) Amphibian
-B) Lizard
-
-6. Which sea creature has three hearts?
-A) Jellyfish
-B) Shark
-C) Octopus
-D) Whale
-C) Octopus
-
-7. What do you call a group of lions?
-A) Pack
-B) Herd
-C) Pride
-D) Flock
-C) Pride
-
-8. Which animal is known to laugh when tickled?
-A) Cat
-B) Dog
-C) Rat
-D) Parrot
-C) Rat
-
-9. How many legs does a lobster have?
-A) 6
-B) 8
-C) 10
-D) 12
-C) 10
-
-10. What is the only mammal capable of true flight?
-A) Flying squirrel
-B) Bat
-C) Sugar glider
-D) Flying lemur
-B) Bat
+What is the fastest land animal in the world?
+Lion
+Horse
+Cheetah
+Greyhound
+C
+Which animal is known to have the best memory?
+Dog
+Dolphin
+Chimpanzee
+Elephant
+D
+What is a baby kangaroo called?
+Kit
+Calf
+Joey
+Pup
+C
+Which bird is a universal symbol of peace?
+Eagle
+Owl
+Dove
+Swan
+C
+What type of animal is a Komodo dragon?
+Mammal
+Lizard
+Fish
+Amphibian
+B
+Which sea creature has three hearts?
+Jellyfish
+Shark
+Octopus
+Whale
+C
+What do you call a group of lions?
+Pack
+Herd
+Pride
+Flock
+C
+Which animal is known to laugh when tickled?
+Cat
+Dog
+Rat
+Parrot
+C
+How many legs does a lobster have?
+6
+8
+10
+12
+C
+What is the only mammal capable of true flight?
+Flying squirrel
+Bat
+Sugar glider
+Flying lemur
+B

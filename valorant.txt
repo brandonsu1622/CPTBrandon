@@ -51,10 +51,11 @@ How many bullets does the Classic pistol hold in one magazine?
 12
 3
 15
-C
+b
 Which agent can throw a flash that curves around corners?
 Yoru
 Skye
 Phoenix
 Omen
 C
+

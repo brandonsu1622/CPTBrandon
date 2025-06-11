@@ -6,8 +6,7 @@ public class MultipleChoiceTest{
 
 //stray kids test
 	public static void quiz1(Console con){ 
-		TextInputFile straykids = new TextInputFile("straykids.txt"); 
-		
+		TextInputFile straykids = new TextInputFile("straykids.txt");
 		//basic array 
 		String strstraykids [][];
 		
@@ -127,7 +126,8 @@ public class MultipleChoiceTest{
 		 //printing the answers 
 		 
 		 for(intloop = 0; intloop < intquestions; intloop++){
-			 con.println(strname + "  Straykids   " + dblavg + "%");
+			 dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
+			 con.println(strname + "  straykids   " + dblavg + "%");
 			 con.println("Question " + strstraykids[intloop][0]); 
 			 con.println("A. " + strstraykids[intloop][1]);
 			 con.println("B. " + strstraykids[intloop][2]);
@@ -140,7 +140,6 @@ public class MultipleChoiceTest{
 			 if(stranswer.equalsIgnoreCase(strstraykids[intloop][5])) {
 				intcorrectanswer++;
 				con.println("Correct!");
-				intcorrectanswer += 1; 
 			} else {
 					con.println("Wrong! The correct answer was " + strstraykids[intloop][5]);
 				}
@@ -149,7 +148,7 @@ public class MultipleChoiceTest{
 			con.sleep(1000);
 			con.clear(); 
 		 }
-			dblavg = ((double) intcorrectanswer / intquestions) * 100;
+			dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			con.println("You got " + intcorrectanswer + "/" + intquestions + " correct.");
 			con.println("Score: " + dblavg + "%");
 
@@ -158,33 +157,36 @@ public class MultipleChoiceTest{
 								for (introw2 = 0; introw2 < 6; introw2++) {
 								String line = straykids.readLine();
 							if (line == null) {
-								System.err.println("File ended unexpectedly at question " + (introw1+1));
+								System.out.println("File ended unexpectedly at question " + (introw1+1));
 							break;
 							}
 						strstraykids[introw1][introw2] = line;
+						
 						}
 						strstraykids[introw1][6] = Integer.toString((int)(Math.random() * 100 + 1));
 						}
 						
-				//leaderboard
-			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt"); 
+			//leaderboard
+			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt", true); 
 			
 			leaderboard.println(strname); 
 			leaderboard.println("straykids"); 
 			leaderboard.println(dblavg); 
 			
-			//results sceen
+			//result screen 
 			con.println("Final Results: ");
-			con.println("Name:              " + strname);	
+			con.println("Name:       " +strname);
 			con.println("Test type: 	    straykids");
 			con.println("Win Percentage: " + dblavg + "%");
 					
 			con.sleep(2000);
 			con.println("Thanks for playing!");
-			con.println("Return back to main menu?");
-			String strBack = con.readLine();
+			con.println("Return back to main menu(yes or no)?");
+			String strback = con.readLine();
+			if(strback.equalsIgnoreCase("yes")){
+				con.clear();
+			}
 			con.clear();
-			
 							 
 	 }
 	 public static void quiz2 (Console con){ 
@@ -309,6 +311,7 @@ public class MultipleChoiceTest{
 		 //printing the answers 
 		 
 		 for(intloop = 0; intloop < intquestions; intloop++){
+			 dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			 con.println(strname + "  animals   " + dblavg + "%");
 			 con.println("Question " + stranimals[intloop][0]); 
 			 con.println("A. " + stranimals[intloop][1]);
@@ -322,7 +325,7 @@ public class MultipleChoiceTest{
 			 if(stranswer.equalsIgnoreCase(stranimals[intloop][5])) {
 				intcorrectanswer++;
 				con.println("Correct!");
-				intcorrectanswer += 1; 
+				
 			} else {
 					con.println("Wrong! The correct answer was " + stranimals[intloop][5]);
 				}
@@ -331,7 +334,7 @@ public class MultipleChoiceTest{
 			con.sleep(1000);
 			con.clear(); 
 		 }
-			dblavg = ((double) intcorrectanswer / intquestions) * 100;
+			dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			con.println("You got " + intcorrectanswer + "/" + intquestions + " correct.");
 			con.println("Score: " + dblavg + "%");
 
@@ -492,6 +495,7 @@ public class MultipleChoiceTest{
 		 //printing the answers 
 		 
 		 for(intloop = 0; intloop < intquestions; intloop++){
+			 dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			 con.println(strname + "  arcane   " + dblavg + "%");
 			 con.println("Question " + strarcane[intloop][0]); 
 			 con.println("A. " + strarcane[intloop][1]);
@@ -505,7 +509,7 @@ public class MultipleChoiceTest{
 			 if(stranswer.equalsIgnoreCase(strarcane[intloop][5])) {
 				intcorrectanswer++;
 				con.println("Correct!");
-				intcorrectanswer += 1; 
+				 
 			} else {
 					con.println("Wrong! The correct answer was " + strarcane[intloop][5]);
 				}
@@ -514,7 +518,7 @@ public class MultipleChoiceTest{
 			con.sleep(1000);
 			con.clear(); 
 		 }
-			dblavg = (intcorrectanswer / intquestions) * 100;
+			dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			con.println("You got " + intcorrectanswer + "/" + intquestions + " correct.");
 			con.println("Score: " + dblavg + "%");
 
@@ -553,7 +557,7 @@ public class MultipleChoiceTest{
 							 
 	 }
 	  public static void quiz4 (Console con){ 
-		TextInputFile valorant = new TextInputFile("arcane.txt"); 
+		TextInputFile valorant = new TextInputFile("valorant.txt"); 
 		
 		//basic array 
 		String strvalorant [][];
@@ -674,7 +678,8 @@ public class MultipleChoiceTest{
 		 //printing the answers 
 		 
 		 for(intloop = 0; intloop < intquestions; intloop++){
-			 con.println(strname + "  arcane   " + dblavg + "%");
+			 dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
+			 con.println(strname + "  valorant   " + dblavg + "%");
 			 con.println("Question " + strvalorant[intloop][0]); 
 			 con.println("A. " + strvalorant[intloop][1]);
 			 con.println("B. " + strvalorant[intloop][2]);
@@ -687,7 +692,6 @@ public class MultipleChoiceTest{
 			 if(stranswer.equalsIgnoreCase(strvalorant[intloop][5])) {
 				intcorrectanswer++;
 				con.println("Correct!");
-				intcorrectanswer += 1; 
 			} else {
 					con.println("Wrong! The correct answer was " + strvalorant[intloop][5]);
 				}
@@ -696,7 +700,7 @@ public class MultipleChoiceTest{
 			con.sleep(1000);
 			con.clear(); 
 		 }
-			dblavg = (intcorrectanswer / intquestions) * 100;
+			dblavg = ((double) intcorrectanswer /(double) intquestions) * 100;
 			con.println("You got " + intcorrectanswer + "/" + intquestions + " correct.");
 			con.println("Score: " + dblavg + "%");
 
@@ -715,7 +719,7 @@ public class MultipleChoiceTest{
 						}
 						
 			//leaderboard
-			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt"); 
+			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt", true); 
 			
 			leaderboard.println(strname); 
 			leaderboard.println("valorant"); 
@@ -723,14 +727,17 @@ public class MultipleChoiceTest{
 			
 			//result screen 
 			con.println("Final Results: ");
-			con.println("Name:              " + strname);
+			con.println("Name:       " +strname);
 			con.println("Test type: 	    valorant");
 			con.println("Win Percentage: " + dblavg + "%");
 					
 			con.sleep(2000);
 			con.println("Thanks for playing!");
-			con.println("Return back to main menu?");
-			String strBack = con.readLine();
+			con.println("Return back to main menu(yes or no)?");
+			String strback = con.readLine();
+			if(strback.equalsIgnoreCase("yes")){
+				con.clear();
+			}
 			con.clear();
 							 
 	 }

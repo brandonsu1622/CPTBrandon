@@ -21,8 +21,6 @@ public class cptbrandon{
 			con.repaint();
 		//main menu 
 
-			
-		while(true){ 
 			con.drawString("Welcome to Multiple Choice", 280, 50);
 			
 			con.drawString("What would you like to do?", 450, 120);
@@ -38,13 +36,13 @@ public class cptbrandon{
 			con.drawString("Quit", 480, 640); 
 			
 			con.repaint(); 
-			break;
-		}
+			
+		
 		System.out.println("Able to display to main screen");			
 			
 		//Mouse iput 
 		
-		while(true){
+			while(true){
 				if(con.currentMouseButton() == 1) {
 					int intMouseX = con.currentMouseX();
 					int intMouseY = con.currentMouseY();				
@@ -77,46 +75,60 @@ public class cptbrandon{
 							
 							
 						}
-					con.println("what quiz would you like to play(add.txt)?"); 
+					con.println("what quiz would you like to play?"); 
 					String strquiz = con.readLine(); 
 					
 						//accessing the quizes
 						//stray kids quiz
-						
-						if(strquiz.equalsIgnoreCase("straykids.txt")){
+					
+						if(strquiz.equalsIgnoreCase("straykids")){
 							TextInputFile straykids = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz1(con);
+							System.out.println("able to print straykids quiz"); 
 											
 								
 						}
 						//animals quiz 
 						
-						if(strquiz.equalsIgnoreCase("animals.txt")){
+						if(strquiz.equalsIgnoreCase("animals")){
 							TextInputFile straykids = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz2(con);
+							System.out.println("able to print animals quiz"); 
 						}
-						if(strquiz.equalsIgnoreCase("arcane.txt")){
+						if(strquiz.equalsIgnoreCase("arcane")){
 							TextInputFile straykids = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz3(con);
+							System.out.println("able to print arcane quiz"); 
 						}
-						if(strquiz.equalsIgnoreCase("valorant.txt")){
-							TextInputFile straykids = new TextInputFile(strquiz);
+						if(strquiz.equalsIgnoreCase("valorant")){
+							TextInputFile valorant = new TextInputFile(strquiz);
 							con.clear();  
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz4(con);
-						}
+							System.out.println("able to print valorant quiz"); 
 							
-					}
+							
+							
+						}
+					
+				}
+			
+					
+						
+						
+						
+							
+					
 				}
 			}
 		}

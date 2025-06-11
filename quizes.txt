@@ -1,5 +1,4 @@
-straykids.txt
-animals.txt
-arcane.txt 
-valorant.txt
-
+straykids
+animals
+arcane 
+valorant
