@@ -58,7 +58,7 @@ public class cptbrandon{
 						
 						// User inputting their names
 						con.println("Please enter your name: ");
-						String strname = con.readLine();
+						strname = con.readLine();
 						con.clear();
 						
 						con.println("Hello " + strname+" what quiz would you like to do?");
@@ -88,8 +88,7 @@ public class cptbrandon{
 							
 							MultipleChoiceTest.quiz1(con);
 							System.out.println("able to print straykids quiz"); 
-											
-								
+							break;			
 						}
 						//animals quiz 
 						
@@ -99,7 +98,8 @@ public class cptbrandon{
 							con.drawImage(imgbackground, 0, 0);
 							
 							MultipleChoiceTest.quiz2(con);
-							System.out.println("able to print animals quiz"); 
+							System.out.println("able to print animals quiz");
+							break;  
 						}
 						if(strquiz.equalsIgnoreCase("arcane")){
 							TextInputFile straykids = new TextInputFile(strquiz);
@@ -108,7 +108,9 @@ public class cptbrandon{
 							
 							MultipleChoiceTest.quiz3(con);
 							System.out.println("able to print arcane quiz"); 
+							break; 
 						}
+						
 						if(strquiz.equalsIgnoreCase("valorant")){
 							TextInputFile valorant = new TextInputFile(strquiz);
 							con.clear();  
@@ -116,6 +118,7 @@ public class cptbrandon{
 							
 							MultipleChoiceTest.quiz4(con);
 							System.out.println("able to print valorant quiz"); 
+							break; 
 							
 							
 							
@@ -142,13 +145,161 @@ public class cptbrandon{
 						con.println("this is the leaderboard"); 
 						con.println("Name:   |Test Type:   |Winning Average:    "); 
 						con.println("________________________________________________"); 
+						
+						while(leaderboard.eof() == false){
+							strname = leaderboard.readLine(); 
+							strtest = leaderboard.readLine(); 
+							stravg = leaderboard.readLine(); 
+							intcount += 1; 
+							
+						}
+						leaderboard.close(); 
+						
+						String strleaderboard[][];
+						strleaderboard = new String[intcount][3]; 
+						
+						leaderboard = new TextInputFile("leaderboard.txt");  
+						while(leaderboard.eof() == false){
+							int introw;  
+							
+							for(introw = 0; introw < intcount; introw++){ 
+								
+								strleaderboard[introw][0] = leaderboard.readLine(); 
+								strleaderboard[introw][1] = leaderboard.readLine(); 
+								strleaderboard[introw][2] = leaderboard.readLine(); 
+							}
 						}
 						
+			String strnames;
+			String strtests; 
+			String straccuracy; 
+			int introw1; 
+			int introw2;  
 						
+			//bubble sorting the leaderboard from highest to lowest 
+			
+			for(introw2 = 0; introw2 < intcount - 1; introw2++) {
+				for(introw1 = 0; introw1 < intcount - 1 - introw2; introw1++) { 
+					
+					if(Double.parseDouble(strleaderboard[introw1][2]) > Double.parseDouble(strleaderboard[introw1 + 1][2])){
 						
+						strnames = strleaderboard[introw1][0];
+						strtests = strleaderboard[introw1][1]; 
+						straccuracy = strleaderboard[introw1][2]; 
 						
+						strleaderboard[introw1][0] = strleaderboard[introw1 + 1][0];  
+						strleaderboard[introw1][1] = strleaderboard[introw1 + 1][1]; 
+						strleaderboard[introw1][2] = strleaderboard[introw1 + 1][2]; 
 						
-							
+						strleaderboard[introw1 + 1][0] = strnames; 
+						strleaderboard[introw1 + 1][1] = strtests; 
+						strleaderboard[introw1 + 1][2] = straccuracy; 
+						
+					}
+				}
+			}
+			
+			int intloop; 
+			
+			//printing all the records from the tests
+			for(intloop = 0; intloop < intcount; intloop++){
+							con.println(strleaderboard[intloop][0] + "	|" + strleaderboard[intloop][1] + "	|" + strleaderboard[intloop][2]);
+						
+						}
+						con.println(); 
+						con.println("Press any key if you want to go back to main menu.");
+						char chrback = con.getChar();
+						con.clear();
+						
+						break; 
+					}
+					
+					
+			//help screen
+			
+			else if(intMouseX >= 500 && intMouseX <= 780 && intMouseY >= 480 && intMouseY <= 530){
+				
+				con.clear(); 
+				con.drawImage(imgbackground, 0, 0);
+				
+				//debug 
+				System.out.println("able to access help menu"); 
+				
+				con.println("---Help Menu---"); 
+				con.sleep(1000);
+				con.println("How to play: "); 
+				con.sleep(1000); 
+				con.println("choose any quiz you want to play"); 
+				con.sleep(1000); 
+				con.println("after choosing the quiz start answering with the corresponding letter answer"); 
+				con.sleep(1000); 
+				con.println("The person with the highest accuracy will be 1st in the leaderboard");
+				con.sleep(1000);
+				con.println("Try your best and aim for the top.");
+				con.sleep(1000);
+				con.println("Otherwise, have fun!!!");
+				
+				con.println("Press any key if you want to go back to main menu.");
+				char chrback = con.getChar();
+				con.clear();
+				
+				break;
+			}
+			//adding the add quiz menu 
+			else if (intMouseX >= 500 && intMouseX <= 780 && intMouseY >= 560 && intMouseY <= 610) {
+				con.clear();
+				con.drawImage(imgbackground, 0, 0);
+				//debugging
+				
+				System.out.println("able to access the add quiz menu"); 
+				
+				//asking and reading quiz name
+				con.println("----add new quiz---"); 
+				con.println("enter quiz name(no spaces, it will be saved as a .txt file)"); 
+				String strquiz = con.readLine();
+				TextOutputFile newquiz = new TextOutputFile(strquiz + ".txt"); 
+				 
+				
+				//asking for number of questions 
+				con.println("how many questions well the quiz have: "); 
+				int intquestions = Integer.parseInt(con.readLine()); 
+				
+				for(int intcount = 1; intcount <= intquestions; intcount++){ 
+					con.println("enter question: "); 
+					String strquestion = con.readLine(); 
+					con.println("enter answer A: "); 
+					String stroptA = con.readLine(); 
+					con.println("enter answer B: "); 
+					String stroptB = con.readLine(); 
+					con.println("enter answer C: "); 
+					String stroptC = con.readLine(); 
+					con.println("enter answer D: "); 
+					String stroptD = con.readLine(); 
+					con.println("enter the actual answer(A, B, C, or D): "); 
+					String strcorrectanswer = con.readLine().toLowerCase();
+					
+					//saving answers to new quiz 
+					newquiz.println(strquestion);
+					newquiz.println(stroptA);
+					newquiz.println(stroptB);
+					newquiz.println(stroptC);
+					newquiz.println(stroptD);
+					newquiz.println(strcorrectanswer);
+				} 
+				newquiz.close(); 
+				
+				//putting the quiz into quizes.txt
+				TextOutputFile updateQuizList = new TextOutputFile("quizes.txt", true);
+				updateQuizList.println(strquiz);
+				updateQuizList.close();
+				
+				con.println("quiz succesfully added!"); 
+				con.println("press any key to return to main menu"); 
+				char chrback = con.getChar();
+						con.clear();
+						
+						break; 					
+			}
 					
 				}
 			}

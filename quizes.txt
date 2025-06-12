@@ -2,3 +2,4 @@ straykids
 animals
 arcane 
 valorant
+bio
