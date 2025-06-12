@@ -16,3 +16,6 @@ valorant
 brandon
 animals
 70.0
+
+jover
+100.0

@@ -83,14 +83,25 @@ public class cptbrandon{
 							
 						}
 					con.println("what quiz would you like to play?"); 
+					con.println("for newly added quizes just type the name of the new quiz"); 
 					String strquiz = con.readLine(); 
 					
 	
 		// accessing the added quiz
 		String filename = strquiz + ".txt";
-	if(strquiz.equalsIgnoreCase(filename)){
+	boolean fileExists = true;
+
+		try{
+			TextInputFile file = new TextInputFile(filename);
+			} catch (Exception e) {
+			fileExists = false;
+			}
+
+if (fileExists) {
 		TextInputFile newquiz = new TextInputFile(filename);
-		
+		System.out.println("able to access "+filename); 
+		con.clear(); 
+		con.drawImage(imgbackground, 0, 0);
 		//basic array 
 		String strquiz2 [][];
 
@@ -131,9 +142,8 @@ public class cptbrandon{
 		
 		TextInputFile quiz = new TextInputFile(filename);
 		strquiz2 = new String [intquestions][7];
-		while(newquiz.eof() == false){
-			String strrandnum; 
-			int introw; 
+		for (int introw = 0; introw < intquestions; introw++) {
+			String strrandnum;  
 			
 			//rows and columns 
 			
@@ -254,7 +264,7 @@ public class cptbrandon{
 			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt", true); 
 			
 			leaderboard.println(strname); 
-			leaderboard.println("valorant"); 
+			leaderboard.println(strquiz); 
 			leaderboard.println(dblavg); 
 			
 			//result screen 
