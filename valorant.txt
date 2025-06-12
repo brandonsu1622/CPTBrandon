@@ -4,7 +4,7 @@ Killjoy
 Viper
 Chamber
 B
-Which weapon costs 2900 credits and is known for its high burst potential?
+Which weapon costs 2100 credits and is known for its high burst potential?
 Phantom
 Guardian
 Spectre

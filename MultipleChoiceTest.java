@@ -351,7 +351,7 @@ public class MultipleChoiceTest{
 						}
 						
 				//leaderboard 
-				TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt"); 
+				TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt", true); 
 			
 				leaderboard.println(strname); 
 				leaderboard.println("animals"); 
@@ -365,7 +365,7 @@ public class MultipleChoiceTest{
 					
 				con.sleep(2000);
 				con.println("Thanks for playing!");
-				con.println("Return back to main menu?");
+				con.println("Return back to main menu?(yes or no)");
 				String strBack = con.readLine();
 				con.clear();
 			
@@ -536,7 +536,7 @@ public class MultipleChoiceTest{
 						}
 						
 			//leaderboard
-			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt"); 
+			TextOutputFile leaderboard = new TextOutputFile("leaderboard.txt", true); 
 			
 			leaderboard.println(strname); 
 			leaderboard.println("arcane"); 
@@ -550,7 +550,7 @@ public class MultipleChoiceTest{
 					
 			con.sleep(2000);
 			con.println("Thanks for playing!");
-			con.println("Return back to main menu?");
+			con.println("Return back to main menu?(Yes or no)");
 			String strBack = con.readLine();
 			con.clear();
 							 

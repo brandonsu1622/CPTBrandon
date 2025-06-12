@@ -181,7 +181,7 @@ public class cptbrandon{
 			for(introw2 = 0; introw2 < intcount - 1; introw2++) {
 				for(introw1 = 0; introw1 < intcount - 1 - introw2; introw1++) { 
 					
-					if(Double.parseDouble(strleaderboard[introw1][2]) > Double.parseDouble(strleaderboard[introw1 + 1][2])){
+					if(Double.parseDouble(strleaderboard[introw1][2]) < Double.parseDouble(strleaderboard[introw1 + 1][2])){
 						
 						strnames = strleaderboard[introw1][0];
 						strtests = strleaderboard[introw1][1]; 
