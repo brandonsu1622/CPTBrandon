@@ -72,7 +72,7 @@ public class cptbrandon{
 						con.println("Hello " + strname);
 						con.sleep(1000);
 						
-						
+						 
 
 						int intX = 120;
 						
