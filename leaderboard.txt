@@ -10,3 +10,9 @@ straykids
 ethan
 animals
 60.0
+
+valorant
+0.0
+brandon
+animals
+70.0
